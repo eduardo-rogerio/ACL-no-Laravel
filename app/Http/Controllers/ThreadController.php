@@ -19,12 +19,12 @@ class ThreadController extends Controller
     public function index()
     {
         $threads = $this->thread->paginate(15);
-        return view('thread.index',compact('threads'));
+        return view('threads.index',compact('threads'));
     }
 
     public function create()
     {
-        return view('thread.create');
+        return view('threads.create');
     }
 
     public function store(Request $request)
@@ -45,7 +45,7 @@ class ThreadController extends Controller
     public function edit($id)
     {
         $threads = $this->thread->find(1);
-        return view('thread.edit',compact('threads'));
+        return view('threads.edit',compact('threads'));
     }
 
     /**
